@@ -1,0 +1,17 @@
+{
+  "name": "tripsplit-app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:client": "npm --prefix client run dev",
+    "dev:server": "npm --prefix server run dev",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server start",
+    "install:all": "npm install && npm --prefix client install && npm --prefix server install"
+  },
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
