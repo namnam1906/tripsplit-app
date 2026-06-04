@@ -12,6 +12,9 @@
     "install:all": "npm install && npm --prefix client install && npm --prefix server install"
   },
   "dependencies": {
-    "concurrently": "^9.1.2"
+    "concurrently": "^9.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.19.2"
   }
 }
