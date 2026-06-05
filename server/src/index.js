@@ -56,8 +56,8 @@ app.post('/api/receipts/ocr', upload.single('receipt'), async (req, res) => {
 const clientBuild = path.join(__dirname, '../../client/dist');
 app.use(express.static(clientBuild));
 
-// SPA fallback — all non-API routes return index.html
-app.get('*', (req, res) => {
+// SPA fallback — Express v5 requires named wildcard, not bare *
+app.get('/{*splat}', (req, res) => {
   res.sendFile(path.join(clientBuild, 'index.html'));
 });
 
